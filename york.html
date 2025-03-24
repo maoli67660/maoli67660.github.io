@@ -19,6 +19,7 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            touch-action: none; /* 防止默认的触摸行为 */
         }
 
         #slideContainer {
@@ -40,6 +41,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            transition: transform 0.3s ease;
         }
 
         .slide.active {
@@ -145,6 +147,67 @@
         .content::-webkit-scrollbar-thumb:hover {
             background: #005a4f;
         }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 1.6em;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 1.2em;
+                line-height: 1.5;
+                margin-bottom: 15px;
+            }
+
+            li {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+            }
+
+            .download-link {
+                padding: 10px 20px;
+                font-size: 1em;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .hint {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            li {
+                font-size: 1.1em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -241,10 +304,13 @@
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         const totalSlides = slides.length;
+        let touchStartX = 0;
+        let touchEndX = 0;
 
         function showSlide(index) {
             slides.forEach(slide => slide.classList.remove('active'));
             slides[index].classList.add('active');
+            updateHint();
         }
 
         function nextSlide() {
@@ -261,6 +327,20 @@
             }
         }
 
+        function updateHint() {
+            const hint = document.querySelector('.hint');
+            if (isMobileDevice()) {
+                hint.textContent = '左右滑动切换页面';
+            } else {
+                hint.textContent = '使用键盘 ← → 箭头键翻页';
+            }
+        }
+
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+
+        // 键盘事件
         document.addEventListener('keydown', function(event) {
             if (event.key === 'ArrowRight') {
                 nextSlide();
@@ -269,8 +349,37 @@
             }
         });
 
-        // 初始化显示第一页
+        // 触摸事件
+        document.addEventListener('touchstart', function(event) {
+            touchStartX = event.touches[0].clientX;
+        }, false);
+
+        document.addEventListener('touchend', function(event) {
+            touchEndX = event.changedTouches[0].clientX;
+            handleSwipe();
+        }, false);
+
+        function handleSwipe() {
+            const swipeDistance = touchEndX - touchStartX;
+            const minSwipeDistance = 50; // 最小滑动距离
+
+            if (Math.abs(swipeDistance) > minSwipeDistance) {
+                if (swipeDistance > 0) {
+                    prevSlide(); // 向右滑动，显示上一页
+                } else {
+                    nextSlide(); // 向左滑动，显示下一页
+                }
+            }
+        }
+
+        // 阻止移动设备上的默认滑动行为
+        document.addEventListener('touchmove', function(event) {
+            event.preventDefault();
+        }, { passive: false });
+
+        // 初始化
         showSlide(currentSlide);
+        updateHint();
     </script>
 </body>
 </html>
