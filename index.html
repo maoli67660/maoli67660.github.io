@@ -3,116 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mao Li, Ph.D. | Senior Data Engineer & AI Specialist</title>
+    <title>Mao Li, Ph.D.</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        h1 { margin-bottom: 5px; font-weight: 700; font-size: 2.5em; }
-        h2 { border-bottom: 2px solid #333; padding-bottom: 5px; margin-top: 40px; color: #222; text-transform: uppercase; font-size: 1.2em; letter-spacing: 1px; }
-        h3 { margin-top: 25px; color: #444; }
-        .subtitle { color: #666; font-size: 1.2em; margin-bottom: 20px; font-weight: 300; }
-        .contact { margin-bottom: 30px; }
-        .contact a { color: #007aff; text-decoration: none; margin-right: 15px; font-weight: 500; }
-        .exp-item { margin-bottom: 25px; }
-        .exp-header { display: flex; justify-content: space-between; font-weight: 700; color: #111; }
-        .skills-tag { background: #f0f0f0; padding: 3px 10px; border-radius: 4px; font-size: 0.85em; display: inline-block; margin: 3px; border: 1px solid #ddd; }
-        .project-detail { font-size: 0.95em; color: #555; margin-top: 5px; border-left: 3px solid #eee; padding-left: 15px; }
-        .pub-item { margin-bottom: 20px; }
-        .pub-title { font-weight: 600; color: #007aff; text-decoration: none; display: block; }
-        .pub-contribution { font-size: 0.9em; color: #666; font-style: italic; margin-top: 4px; }
-        @media (max-width: 600px) { .exp-header { flex-direction: column; } }
+        :root { --bg: #ffffff; --text: #111; --dim: #555; }
+        body { 
+            font-family: "Menlo", "Monaco", "Consolas", monospace; 
+            line-height: 1.6; color: var(--text); max-width: 850px; 
+            margin: 60px auto; padding: 0 40px; background: var(--bg);
+        }
+        header { margin-bottom: 40px; border-left: 4px solid #000; padding-left: 20px; }
+        h1 { font-size: 2em; font-weight: 700; margin: 0; }
+        h2 { font-size: 0.9em; font-weight: 700; text-transform: uppercase; margin-top: 45px; margin-bottom: 15px; color: #000; letter-spacing: 1px; }
+        p { margin: 12px 0; }
+        a { color: #007aff; text-decoration: none; border-bottom: 1px solid transparent; }
+        a:hover { border-bottom: 1px solid #007aff; }
+        
+        .contact-bar { font-size: 0.9em; margin-top: 10px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .item { margin-bottom: 30px; }
+        .item-header { display: flex; justify-content: space-between; font-weight: 700; }
+        .date { font-weight: 400; color: var(--dim); }
+        .desc { margin-top: 6px; font-size: 0.95em; color: #333; }
+        
+        .keyword { font-weight: 700; text-decoration: none; color: #000; background: #fdfd96; padding: 0 2px; }
+        .footer-btn { 
+            display: inline-block; background: #000; color: #fff; padding: 10px 20px; 
+            text-decoration: none; font-weight: 700; margin-top: 40px;
+        }
+        .footer-btn:hover { background: #333; color: #fff; }
+
+        @media (max-width: 600px) { body { padding: 0 20px; } .grid { grid-template-columns: 1fr; } .item-header { flex-direction: column; } }
     </style>
 </head>
 <body>
 
-    <h1>Mao Li, Ph.D.</h1>
-    <p class="subtitle">Senior Data Engineer | Distributed Systems & Reinforcement Learning Specialist</p>
-    
-    <div class="contact">
-        <a href="mailto:maoli67660@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/mao-li-5336a487" target="_blank">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?hl=en&user=ey0Gw34AAAAJ" target="_blank">Google Scholar</a>
-        <a href="#">GitHub</a>
-    </div>
-
-    <h2>About Me</h2>
-    <p>
-        [cite_start]I am a Senior Data Engineer with over 10 years of experience across industry and academia[cite: 26, 33]. [cite_start]My expertise lies at the intersection of <strong>Large-scale Data Engineering</strong> and <strong>Machine Learning</strong>[cite: 28]. [cite_start]I specialize in architecting high-throughput data infrastructures that process <strong>billions of daily events</strong> and manage <strong>PB-scale</strong> datasets[cite: 27]. [cite_start]With a <strong>Ph.D. in Artificial Intelligence</strong>, I bring a deep analytical perspective to solving complex problems in AdTech and Recommender Systems[cite: 33].
-    </p>
-
-    <h2>Core Technical Arsenal</h2>
-    <div style="margin-top: 15px;">
-        [cite_start]<strong>Distributed Systems:</strong> <span class="skills-tag">Spark</span> <span class="skills-tag">Airflow</span> <span class="skills-tag">Kafka</span> <span class="skills-tag">Hive</span> <span class="skills-tag">Trino/Presto</span> <span class="skills-tag">MapReduce</span> [cite: 31]<br>
-        [cite_start]<strong>AI & Research:</strong> <span class="skills-tag">Reinforcement Learning</span> <span class="skills-tag">PyTorch</span> <span class="skills-tag">TensorFlow</span> <span class="skills-tag">Deep Learning</span> <span class="skills-tag">Data Mining</span> [cite: 32, 33]<br>
-        [cite_start]<strong>Engineering:</strong> <span class="skills-tag">Python</span> <span class="skills-tag">SQL (Expert)</span> <span class="skills-tag">Java</span> <span class="skills-tag">Scala</span> <span class="skills-tag">AWS</span> <span class="skills-tag">Docker</span> <span class="skills-tag">Redis</span> [cite: 30, 32]
-    </div>
-
-    <h2>Selected Experience</h2>
-    
-    <div class="exp-item">
-        <div class="exp-header">
-            <span>Senior Data Engineer @ Roku</span>
-            <span>2023 – Present</span>
+    <header>
+        <h1>MAO LI, Ph.D.</h1>
+        <div class="contact-bar">
+            <a href="mailto:maoli67660@gmail.com">Email</a> / 
+            <a href="https://www.linkedin.com/in/mao-li-5336a487" target="_blank">LinkedIn</a> / 
+            <a href="https://scholar.google.com/citations?hl=en&user=ey0Gw34AAAAJ" target="_blank">Scholar</a> / 
+            <a href="https://github.com/maoli67660" target="_blank">GitHub</a>
         </div>
-        <div class="project-detail">
-            [cite_start]Managing the end-to-end lifecycle of critical advertising data pipelines[cite: 27]. 
-            [cite_start]Focusing on <strong>Lakehouse architecture migration</strong> and <strong>Spark performance optimization</strong> to handle multi-billion daily event volumes efficiently[cite: 28, 40].
-        </div>
-    </div>
+    </header>
 
-    <div class="exp-item">
-        <div class="exp-header">
-            <span>Senior Machine Learning & Data Engineer @ Huawei R&D</span>
-            <span>2021 – 2023</span>
-        </div>
-        <div class="project-detail">
-            [cite_start]Architected the redesign of recommendation systems for European market services (Books, Video, Music)[cite: 47]. 
-            [cite_start]Developed a low-latency retrieval layer using <strong>Redis (<15ms)</strong> and scaled ETL pipelines for millions of MAU[cite: 49, 50].
-        </div>
-    </div>
+    <section>
+        <h2>// 01. Summary</h2>
+        <p>
+            Senior Data Engineer with 10+ years of experience. Expert in building <span class="keyword">PB-scale</span> data systems and <span class="keyword">Distributed Infrastructure</span>. 
+            Currently at <strong>Roku</strong>, managing core advertising pipelines processing <strong>billions of daily events</strong>. 
+            <span class="keyword">Ph.D. in AI</span> (Reinforcement Learning) with deep expertise in optimizing high-performance algorithms for AdTech and RecSys.
+        </p>
+    </section>
 
-    <div class="exp-item">
-        <div class="exp-header">
-            <span>Data Scientist (Project Lead) @ THG</span>
-            <span>2020 – 2021</span>
+    <section>
+        <h2>// 02. Technical Arsenal</h2>
+        <div class="grid">
+            <div><strong>[Data]</strong> Spark, Airflow, Kafka, Hive, Trino, Presto</div>
+            <div><strong>[AI/ML]</strong> Reinforcement Learning, PyTorch, TensorFlow</div>
+            <div><strong>[Languages]</strong> Python, SQL (Expert), Java, Scala</div>
+            <div><strong>[Infra]</strong> AWS, Docker, Redis, Linux, Git</div>
         </div>
-        <div class="project-detail">
-            [cite_start]Spearheaded global demand forecasting for millions of SKUs across <strong>Lookfantastic</strong> and <strong>Myprotein</strong>[cite: 55]. 
-            [cite_start]Optimized inventory readiness during high-volatility events like <strong>Black Friday</strong> using advanced time-series modeling[cite: 57].
+    </section>
+
+    <section>
+        <h2>// 03. Experience</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <span>Roku Inc. | Senior Data Engineer</span>
+                <span class="date">2023 — Present</span>
+            </div>
+            <div class="desc">
+                Leading <span class="keyword">Lakehouse architecture migration</span> and <span class="keyword">Spark SQL optimization</span> for high-throughput advertising data pipelines. Managing end-to-end delivery of DMP core components.
+            </div>
         </div>
-    </div>
 
-    <h2>Academic Research</h2>
-    <div class="exp-item">
-        <strong>University of York | Ph.D. in Artificial Intelligence (2015-2020)</strong>
-        <div class="project-detail">
-            [cite_start]Research focused on <strong>Reinforcement Learning (RL)</strong> efficiency[cite: 79]. [cite_start]Proposed novel methods for learning from multiple expert demonstrations, implemented using <strong>Deep RL</strong> frameworks like OpenAI Gym[cite: 18, 19].
+        <div class="item">
+            <div class="item-header">
+                <span>Huawei R&D | Senior ML & Data Engineer</span>
+                <span class="date">2021 — 2023</span>
+            </div>
+            <div class="desc">
+                Architected technical redesign of recommendation systems for European markets. 
+                Implemented <span class="keyword">Redis-based retrieval (&lt;15ms)</span> and scaled ETL pipelines for millions of MAU.
+            </div>
         </div>
-    </div>
 
-    <h2>Selected Publications</h2>
-    <div class="pub-item">
-        <span class="pub-title">"Introspective Q-Learning and Learning from Demonstration"</span>
-        <div class="pub-contribution">Key finding: Introduced an introspective agent capable of dynamically deciding when to request and follow human demonstrations to improve RL convergence.</div>
-    </div>
-    <div class="pub-item">
-        <span class="pub-title">"Two-level Q-learning: learning from conflict demonstrations"</span>
-        <div class="pub-contribution">Key finding: Developed a framework to handle noisy or conflicting expert advice, ensuring agent stability in complex environments.</div>
-    </div>
-    <div class="pub-item">
-        <span class="pub-title">"Reinforcement learning from multiple experts demonstrations"</span>
-        <div class="pub-contribution">Key finding: Proposed a multi-expert integration method to significantly reduce sample complexity in high-dimensional tasks.</div>
-    </div>
+        <div class="item">
+            <div class="item-header">
+                <span>THG | Data Scientist (Project Lead)</span>
+                <span class="date">2020 — 2021</span>
+            </div>
+            <div class="desc">
+                Spearheaded global demand forecasting for millions of SKUs. 
+                Optimized inventory for <span class="keyword">Black Friday</span> using advanced time-series modeling and distributed computing.
+            </div>
+        </div>
+    </section>
 
-    <h2>Education</h2>
-    <ul>
-        [cite_start]<li><strong>Ph.D., Artificial Intelligence</strong>, University of York [cite: 79]</li>
-        [cite_start]<li><strong>M.S., Computer Science</strong>, Zhejiang University [cite: 81]</li>
-    </ul>
+    <section>
+        <h2>// 04. Education</h2>
+        <div class="item">
+            <div class="item-header">
+                <span>University of York</span>
+                <span class="date">2015 — 2020</span>
+            </div>
+            <div class="desc"><span class="keyword">Ph.D. in Artificial Intelligence</span>. Research on Reinforcement Learning and multi-expert demonstration.</div>
+        </div>
+        <div class="item">
+            <div class="item-header">
+                <span>Zhejiang University</span>
+                <span class="date">2011 — 2013</span>
+            </div>
+            <div class="desc">M.S. in Computer Science. Focus on Data Mining and Big Data systems.</div>
+        </div>
+    </section>
 
-    <p style="margin-top: 60px; font-size: 0.85em; color: #888; text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
-        Mao Li — Senior Data Engineer — Manchester, UK<br>
-        <a href="Resume_Mao_Li.pdf" style="color: #007aff;">Download Detailed Resume (PDF)</a>
-    </p>
+    <section>
+        <h2>// 05. Selected Publications</h2>
+        <div class="desc">
+            • Introspective Q-Learning and Learning from Demonstration<br>
+            • Two-level Q-learning: learning from conflict demonstrations<br>
+            • Reinforcement learning from multiple experts demonstrations
+        </div>
+    </section>
+
+    <footer style="text-align: center; margin-top: 60px; border-top: 1px solid #eee; padding-top: 20px;">
+        <a href="Resume_Mao_Li.pdf" class="footer-btn">DOWNLOAD_RESUME_PDF</a>
+        <p style="font-size: 0.8em; color: #888; margin-top: 20px;">[Last Updated: Jan 2026]</p>
+    </footer>
 
 </body>
 </html>
