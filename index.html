@@ -1,138 +1,113 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mao Li, Ph.D.</title>
-    <style>
-        :root { --bg: #ffffff; --text: #111; --dim: #555; }
-        body { 
-            font-family: "Menlo", "Monaco", "Consolas", monospace; 
-            line-height: 1.6; color: var(--text); max-width: 850px; 
-            margin: 60px auto; padding: 0 40px; background: var(--bg);
-        }
-        header { margin-bottom: 40px; border-left: 4px solid #000; padding-left: 20px; }
-        h1 { font-size: 2em; font-weight: 700; margin: 0; }
-        h2 { font-size: 0.9em; font-weight: 700; text-transform: uppercase; margin-top: 45px; margin-bottom: 15px; color: #000; letter-spacing: 1px; }
-        p { margin: 12px 0; }
-        a { color: #007aff; text-decoration: none; border-bottom: 1px solid transparent; }
-        a:hover { border-bottom: 1px solid #007aff; }
-        
-        .contact-bar { font-size: 0.9em; margin-top: 10px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .item { margin-bottom: 30px; }
-        .item-header { display: flex; justify-content: space-between; font-weight: 700; }
-        .date { font-weight: 400; color: var(--dim); }
-        .desc { margin-top: 6px; font-size: 0.95em; color: #333; }
-        
-        .keyword { font-weight: 700; text-decoration: none; color: #000; background: #fdfd96; padding: 0 2px; }
-        .footer-btn { 
-            display: inline-block; background: #000; color: #fff; padding: 10px 20px; 
-            text-decoration: none; font-weight: 700; margin-top: 40px;
-        }
-        .footer-btn:hover { background: #333; color: #fff; }
-
-        @media (max-width: 600px) { body { padding: 0 20px; } .grid { grid-template-columns: 1fr; } .item-header { flex-direction: column; } }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
-<body>
 
-    <header>
-        <h1>MAO LI, Ph.D.</h1>
-        <div class="contact-bar">
-            <a href="mailto:maoli67660@gmail.com">Email</a> / 
-            <a href="https://www.linkedin.com/in/mao-li-5336a487" target="_blank">LinkedIn</a> / 
-            <a href="https://scholar.google.com/citations?hl=en&user=ey0Gw34AAAAJ" target="_blank">Scholar</a> / 
-            <a href="https://github.com/maoli67660" target="_blank">GitHub</a>
-        </div>
-    </header>
-
-    <section>
-        <h2>// 01. Summary</h2>
-        <p>
-            Senior Data Engineer with 10+ years of experience. Expert in building <span class="keyword">PB-scale</span> data systems and <span class="keyword">Distributed Infrastructure</span>. 
-            Currently at <strong>Roku</strong>, managing core advertising pipelines processing <strong>billions of daily events</strong>. 
-            <span class="keyword">Ph.D. in AI</span> (Reinforcement Learning) with deep expertise in optimizing high-performance algorithms for AdTech and RecSys.
-        </p>
-    </section>
-
-    <section>
-        <h2>// 02. Technical Arsenal</h2>
-        <div class="grid">
-            <div><strong>[Data]</strong> Spark, Airflow, Kafka, Hive, Trino, Presto</div>
-            <div><strong>[AI/ML]</strong> Reinforcement Learning, PyTorch, TensorFlow</div>
-            <div><strong>[Languages]</strong> Python, SQL (Expert), Java, Scala</div>
-            <div><strong>[Infra]</strong> AWS, Docker, Redis, Linux, Git</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>// 03. Experience</h2>
-        
-        <div class="item">
-            <div class="item-header">
-                <span>Roku Inc. | Senior Data Engineer</span>
-                <span class="date">2023 — Present</span>
-            </div>
-            <div class="desc">
-                Leading <span class="keyword">Lakehouse architecture migration</span> and <span class="keyword">Spark SQL optimization</span> for high-throughput advertising data pipelines. Managing end-to-end delivery of DMP core components.
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span>Huawei R&D | Senior ML & Data Engineer</span>
-                <span class="date">2021 — 2023</span>
-            </div>
-            <div class="desc">
-                Architected technical redesign of recommendation systems for European markets. 
-                Implemented <span class="keyword">Redis-based retrieval (&lt;15ms)</span> and scaled ETL pipelines for millions of MAU.
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span>THG | Data Scientist (Project Lead)</span>
-                <span class="date">2020 — 2021</span>
-            </div>
-            <div class="desc">
-                Spearheaded global demand forecasting for millions of SKUs. 
-                Optimized inventory for <span class="keyword">Black Friday</span> using advanced time-series modeling and distributed computing.
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>// 04. Education</h2>
-        <div class="item">
-            <div class="item-header">
-                <span>University of York</span>
-                <span class="date">2015 — 2020</span>
-            </div>
-            <div class="desc"><span class="keyword">Ph.D. in Artificial Intelligence</span>. Research on Reinforcement Learning and multi-expert demonstration.</div>
-        </div>
-        <div class="item">
-            <div class="item-header">
-                <span>Zhejiang University</span>
-                <span class="date">2011 — 2013</span>
-            </div>
-            <div class="desc">M.S. in Computer Science. Focus on Data Mining and Big Data systems.</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>// 05. Selected Publications</h2>
-        <div class="desc">
-            • Introspective Q-Learning and Learning from Demonstration<br>
-            • Two-level Q-learning: learning from conflict demonstrations<br>
-            • Reinforcement learning from multiple experts demonstrations
-        </div>
-    </section>
-
-    <footer style="text-align: center; margin-top: 60px; border-top: 1px solid #eee; padding-top: 20px;">
-        <a href="Resume_Mao_Li.pdf" class="footer-btn">DOWNLOAD_RESUME_PDF</a>
-        <p style="font-size: 0.8em; color: #888; margin-top: 20px;">[Last Updated: Jan 2026]</p>
-    </footer>
-
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="mao-li-ph.d.">Mao Li, Ph.D.</h1>
+<p><strong>Senior AI &amp; Data Systems Engineer</strong> 📍 Stockport, UK | 📱 07544 970811 | ✉️ <a href="mailto:maoli67660@gmail.com">maoli67660@gmail.com</a></p>
+<p>🔗 <a href="https://www.linkedin.com/in/mao-li-5336a487/">linkedin.com/in/mao-li-5336a487/</a></p>
+<hr>
+<h3 id="summary"><strong>SUMMARY</strong></h3>
+<p><strong>Machine Learning Ph.D.</strong> with 10+ years of experience across AI research and large-scale engineering. Expert in building <strong>end-to-end ML systems</strong>, from PB-scale data pipelines at <strong>Roku</strong> to sophisticated recommender systems at <strong>Huawei</strong>. Deep expertise in <strong>Reinforcement Learning (RL)</strong> and Distributed Systems. Proven track record of bridging the gap between cutting-edge research and production-grade reliability, specifically for <strong>Agentic Systems</strong> and <strong>RecSys</strong>.</p>
+<hr>
+<h3 id="technical-skills"><strong>TECHNICAL SKILLS</strong></h3>
+<ul>
+<li>
+<p><strong>Programming:</strong> Python (NumPy, PyTorch, TensorFlow, Pandas, Scikit-learn), Scala, SQL (Expert), Java.</p>
+</li>
+<li>
+<p><strong>Data Engineering:</strong> Spark (Performance Tuning), Airflow, Hive, Cassandra, Redis, Kafka, Lakehouse Architecture.</p>
+</li>
+<li>
+<p><strong>Machine Learning:</strong> Reinforcement Learning (Deep Q-learning, Inverse RL, Agents), Deep Learning (Transformers, BERT, CNN/RNN), RecSys (Recall-Ranking, Feature Engineering).</p>
+</li>
+<li>
+<p><strong>Cloud &amp; Infra:</strong> AWS, GCP, Kubernetes (K8s), Docker, DataOps.</p>
+</li>
+</ul>
+<hr>
+<h3 id="professional-experience"><strong>PROFESSIONAL EXPERIENCE</strong></h3>
+<h4 id="roku--senior-data-engineer-manchester-uk--march-2023-–-present"><strong>ROKU | Senior Data Engineer</strong> <em>Manchester, UK | March 2023 – Present</em></h4>
+<ul>
+<li>
+<p><strong>Architected Roku’s Data Management Platform (DMP)</strong> to manage and activate extensive user profiles for targeted advertising and personalization.</p>
+</li>
+<li>
+<p><strong>Engineered high-throughput ETL pipelines</strong> processing billions of daily events, ensuring low-latency data availability for internal analytics and 3rd-party integrations.</p>
+</li>
+<li>
+<p><strong>Optimized large-scale Spark/Scala workflows</strong>, significantly reducing cloud infrastructure costs and improving data reliability via DataOps best practices.</p>
+</li>
+<li>
+<p><strong>Mentored</strong> junior engineers and interns, establishing high standards for code quality and system design.</p>
+</li>
+<li>
+<p><em>Key Tech: Spark, Scala, Hive, Cassandra, AWS, GCP, Kubernetes.</em></p>
+</li>
+</ul>
+<h4 id="huawei--senior-machine-learning-engineer--researcher-london-uk--august-2021-–-march-2023"><strong>HUAWEI | Senior Machine Learning Engineer &amp; Researcher</strong> <em>London, UK | August 2021 – March 2023</em></h4>
+<ul>
+<li>
+<p><strong>Led the ML strategy</strong> for Huawei’s flagship App Gallery, Music, and Video recommender systems across Europe.</p>
+</li>
+<li>
+<p><strong>Developed and deployed core ranking algorithms</strong>, focusing on multi-stage ranking (Recall &amp; Ranking) to drive user engagement and retention.</p>
+</li>
+<li>
+<p><strong>Built robust hybrid pipelines</strong> (offline/nearline) for feature engineering, reducing model training cycles and improving real-time inference accuracy.</p>
+</li>
+<li>
+<p><strong>Conducted Applied Research</strong> to integrate advanced DL/RL techniques into production-level recommender systems.</p>
+</li>
+<li>
+<p><em>Key Tech: TensorFlow, Redis, Spark, Hadoop, Hive, Python, Huawei Cloud.</em></p>
+</li>
+</ul>
+<h4 id="the-hut-group-thg--senior-data-scientist-manchester-uk--february-2020-–-august-2021"><strong>THE HUT GROUP (THG) | Senior Data Scientist</strong> <em>Manchester, UK | February 2020 – August 2021</em></h4>
+<ul>
+<li>
+<p><strong>Pioneered a ML-driven demand forecasting system</strong> for top-tier brands (LookFantastic, MyProtein), optimizing multi-million pound inventory cycles.</p>
+</li>
+<li>
+<p><strong>Improved forecasting accuracy from 62% to 89%</strong> by implementing sophisticated Time Series models (CNN/LSTM/GluonTS) and ensemble methods.</p>
+</li>
+<li>
+<p><strong>Transformed business operations</strong> by integrating model outputs into warehouse slotting and logistics optimization.</p>
+</li>
+<li>
+<p><em>Key Tech: TensorFlow, Scikit-learn, XGBoost, LightGBM, Time Series Analysis.</em></p>
+</li>
+</ul>
+<h4 id="ping-an-technology--data-scientist-shanghai-china--july-2013-–-july-2015"><strong>PING AN TECHNOLOGY | Data Scientist</strong> <em>Shanghai, China | July 2013 – July 2015</em></h4>
+<ul>
+<li>
+<p><strong>Developed a predictive lead-scoring system</strong> for insurance sales, increasing conversion accuracy from 68% to 82%.</p>
+</li>
+<li>
+<p><strong>Architected the initial data warehouse and ETL infrastructure</strong>, establishing the company’s first data governance framework.</p>
+</li>
+</ul>
+<hr>
+<h3 id="education"><strong>EDUCATION</strong></h3>
+<p><strong>Ph.D. in Artificial Intelligence &amp; Computer Science</strong>  <em>University of York, UK | 2015 – 2019</em></p>
+<ul>
+<li>
+<p><strong>Thesis Focus:</strong> Deep Reinforcement Learning and Game Player Agents.</p>
+</li>
+<li>
+<p><strong>Core Research:</strong> Supervised Learning-aided RL, Deep Q-Learning, and Inverse Reinforcement Learning.</p>
+</li>
+</ul>
+<p><strong><a href="http://M.Sc">M.Sc</a>. in Software Engineering (CS Focus)</strong>  <em>Zhejiang University, China | 2011 – 2013</em></p>
+<p><strong><a href="http://B.Sc">B.Sc</a>. in Computer Science</strong>  <em>Tianjin University of Technology and Education, China | 2007 – 2011</em></p>
+</div>
 </body>
+
 </html>
