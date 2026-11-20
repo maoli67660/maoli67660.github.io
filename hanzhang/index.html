@@ -337,9 +337,19 @@
     .char-card .big { font-size: 46px; }
     body { font-size: 16px; }
   }
+  .sibling-link {
+    position: fixed; top: max(10px, env(safe-area-inset-top)); right: 14px; z-index: 10;
+    font-size: 13.5px; color: var(--ink-soft);
+    background: rgba(253, 250, 242, .92);
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 3px 14px;
+    backdrop-filter: blur(6px);
+  }
+  footer .sib { display: block; margin-top: 10px; letter-spacing: 0.1em; }
 </style>
 </head>
 <body>
+<a class="sibling-link" href="../serena/">英文名 · Serena →</a>
 
 <header class="hero">
   <span class="zhouyi-tag">取 名 说 明</span>
@@ -583,6 +593,7 @@
 
 <footer>
   含章可贞<span class="dot">·</span>以时发也
+  <a class="sib" href="../serena/">英文名 · Serena →</a>
 </footer>
 
 </div>

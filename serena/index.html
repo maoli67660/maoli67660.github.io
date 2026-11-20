@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Serena · 取名说明</title>
+<meta name="description" content="Serena：源自拉丁语 serēnus，意为晴朗、平静。李含章的英文名说明。">
+<style>
+  :root {
+    --paper: #f8f4ea;
+    --paper-deep: #f1ebdc;
+    --ink: #2f2a26;
+    --ink-soft: #5c534a;
+    --ink-faint: #8a7f73;
+    --accent: #2e5a87;
+    --accent-deep: #22456a;
+    --gold: #b08d46;
+    --line: #ddd2bd;
+    --card: #fdfaf2;
+    --serif: "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+    --kai: "Kaiti SC", "STKaiti", "KaiTi", "Songti SC", serif;
+    --latin: Georgia, "Times New Roman", serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--serif);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.95;
+    letter-spacing: 0.02em;
+  }
+  html[data-lang="en"] body { font-family: var(--latin); letter-spacing: 0; line-height: 1.75; }
+  html[data-lang="zh"] .en, html[data-lang="en"] .zh { display: none !important; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 20px 56px; }
+
+  /* ---------- top bar ---------- */
+  .topbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 14px;
+    padding-top: max(10px, env(safe-area-inset-top));
+    pointer-events: none;
+  }
+  .topbar > * { pointer-events: auto; }
+  .sibling {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    background: rgba(253, 250, 242, .92);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px 14px;
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(6px);
+  }
+  .lang-switch {
+    display: inline-flex;
+    background: rgba(253, 250, 242, .92);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 2px;
+    backdrop-filter: blur(6px);
+  }
+  .lang-switch button {
+    font: inherit;
+    font-size: 13px;
+    border: 0;
+    background: none;
+    color: var(--ink-faint);
+    padding: 2px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .lang-switch button[aria-pressed="true"] { background: var(--accent); color: #fbf6ec; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    text-align: center;
+    padding: 76px 24px 44px;
+    background: radial-gradient(ellipse at 50% -20%, #fdfaf2 0%, var(--paper) 65%);
+    border-bottom: 1px solid var(--line);
+  }
+  .hero .tag {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 0.35em;
+    color: var(--ink-faint);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px 16px 3px 20px;
+    margin-bottom: 26px;
+  }
+  .hero h1 {
+    font-family: var(--latin);
+    font-size: 64px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.06em;
+    line-height: 1.25;
+  }
+  .hero .ipa {
+    margin-top: 6px;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    color: var(--ink-faint);
+    font-family: var(--latin);
+  }
+  .hero .motto {
+    margin-top: 22px;
+    font-family: var(--kai);
+    font-size: 19px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+  }
+  html[data-lang="en"] .hero .motto { font-family: var(--latin); font-style: italic; letter-spacing: 0.02em; }
+  .monogram {
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-top: 26px;
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fbf6ec;
+    font-family: var(--latin);
+    font-style: italic;
+    font-size: 28px;
+    box-shadow: 0 2px 8px rgba(34, 69, 106, .28);
+  }
+
+  /* ---------- sections ---------- */
+  section { margin-top: 52px; }
+  .sec-head { text-align: center; margin-bottom: 26px; }
+  .sec-head .num {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    margin-bottom: 6px;
+    font-family: var(--latin);
+  }
+  .sec-head h2 {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--accent);
+  }
+  html[data-lang="en"] .sec-head h2 { letter-spacing: 0.02em; }
+  h3 {
+    font-size: 19px;
+    margin: 36px 0 14px;
+    letter-spacing: 0.06em;
+    color: var(--accent-deep);
+  }
+  h3::before { content: "◆"; font-size: 12px; margin-right: 8px; color: var(--gold); vertical-align: 2px; }
+  p { margin: 12px 0; color: var(--ink-soft); }
+  strong { color: var(--ink); }
+  i.la { font-family: var(--latin); }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted rgba(46, 90, 135, .5); }
+  sup.ref { font-size: 11px; margin-left: 1px; }
+  sup.ref a { border-bottom: none; color: var(--gold); }
+
+  .grand-quote {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 30px 24px 26px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(90, 70, 40, .06);
+  }
+  .grand-quote .q { font-family: var(--latin); font-size: 30px; font-style: italic; color: var(--ink); }
+  .grand-quote .gloss { margin-top: 6px; font-size: 17px; color: var(--ink-soft); }
+  .grand-quote .src { margin-top: 14px; font-size: 14px; color: var(--ink-faint); letter-spacing: 0.1em; }
+
+  .char-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0; }
+  .char-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 14px 16px;
+    text-align: center;
+  }
+  .char-card .big { font-family: var(--latin); font-style: italic; font-size: 22px; color: var(--accent); line-height: 1.4; }
+  .char-card .def { margin-top: 8px; font-size: 15px; color: var(--ink-soft); line-height: 1.8; }
+  .char-card .def b { color: var(--ink); }
+  .merge-line { text-align: center; font-family: var(--kai); font-size: 18px; color: var(--ink); margin: 20px 6px 6px; }
+  html[data-lang="en"] .merge-line { font-family: var(--latin); font-style: italic; }
+  .merge-line em { font-style: normal; color: var(--accent); }
+
+  .modern-note {
+    background: linear-gradient(135deg, rgba(46, 90, 135, .06), rgba(176, 141, 70, .08));
+    border: 1px solid rgba(46, 90, 135, .22);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 16px 0;
+  }
+  .modern-note p { color: var(--ink); margin: 8px 0; }
+
+  /* ---------- timeline ---------- */
+  .timeline { margin: 22px 0 6px; border-left: 2px solid var(--line); padding-left: 18px; }
+  .t-item { position: relative; padding: 2px 0 22px; }
+  .t-item:last-child { padding-bottom: 4px; }
+  .t-item::before {
+    content: "";
+    position: absolute;
+    left: -23.5px; top: 12px;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--gold);
+  }
+  .t-era {
+    display: inline-block;
+    font-size: 12.5px;
+    color: #fbf6ec;
+    background: var(--gold);
+    border-radius: 4px;
+    padding: 1px 9px;
+    letter-spacing: 0.08em;
+    margin-right: 8px;
+    vertical-align: 2px;
+  }
+  .t-src { font-size: 15px; color: var(--ink-soft); }
+  .t-src a { color: var(--ink-soft); }
+  .t-quote { font-family: var(--latin); font-style: italic; font-size: 17.5px; color: var(--ink); margin-top: 4px; line-height: 1.7; }
+  .t-quote mark { background: none; color: var(--accent); font-weight: 700; }
+  .t-gloss { font-size: 15px; color: var(--ink-soft); margin-top: 2px; }
+
+  /* ---------- language table ---------- */
+  .lang-table { width: 100%; border-collapse: collapse; margin: 18px 0 6px; font-size: 15px; }
+  .lang-table th, .lang-table td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .lang-table th { font-size: 13px; color: var(--ink-faint); font-weight: 400; letter-spacing: 0.1em; }
+  .lang-table td.w { font-family: var(--latin); font-style: italic; color: var(--accent); white-space: nowrap; }
+  .lang-table td.ipa { font-family: var(--latin); color: var(--ink-faint); white-space: nowrap; font-size: 14px; }
+  .lang-table tr.same td.w { font-weight: 700; }
+  .table-note { font-size: 13.5px; color: var(--ink-faint); }
+
+  /* ---------- people ---------- */
+  .person {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 14px 0;
+  }
+  .person .name { font-size: 19px; font-weight: 700; color: var(--ink); font-family: var(--latin); }
+  .person .tag {
+    display: inline-block;
+    font-family: var(--serif);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--accent);
+    border: 1px solid rgba(46, 90, 135, .4);
+    border-radius: 4px;
+    padding: 0 8px;
+    margin-left: 8px;
+    vertical-align: 2px;
+    letter-spacing: 0.08em;
+  }
+  .person .desc { font-size: 15.5px; color: var(--ink-soft); margin-top: 6px; line-height: 1.85; }
+
+  /* ---------- syllables ---------- */
+  .syl-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 20px 0; }
+  .syl {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 8px 14px;
+    text-align: center;
+  }
+  .syl .s { font-family: var(--latin); font-size: 30px; color: var(--ink); line-height: 1.3; }
+  .syl.stress { border-color: rgba(46, 90, 135, .5); background: rgba(46, 90, 135, .06); }
+  .syl.stress .s { color: var(--accent); font-weight: 700; }
+  .syl .i { font-size: 14px; color: var(--accent); font-family: var(--latin); margin-top: 2px; }
+  .syl .lab { font-size: 12.5px; color: var(--ink-faint); margin-top: 4px; letter-spacing: 0.08em; }
+
+  .final-couplet {
+    text-align: center;
+    background: var(--accent);
+    color: #fbf6ec;
+    border-radius: 10px;
+    padding: 26px 20px;
+    margin: 30px 0 10px;
+    font-family: var(--kai);
+    font-size: 20px;
+    line-height: 2.1;
+    letter-spacing: 0.1em;
+    box-shadow: 0 3px 12px rgba(34, 69, 106, .25);
+  }
+  html[data-lang="en"] .final-couplet { font-family: var(--latin); font-style: italic; letter-spacing: 0.02em; }
+  .final-couplet .nm { font-family: var(--latin); font-style: normal; }
+
+  .refs { margin-top: 18px; font-size: 13.5px; color: var(--ink-faint); line-height: 1.9; }
+  .refs li { margin: 8px 0 8px 4px; word-break: break-all; }
+  .refs a { color: var(--ink-faint); }
+  footer { margin-top: 56px; text-align: center; font-size: 13px; color: var(--ink-faint); letter-spacing: 0.2em; }
+  footer .dot { color: var(--gold); margin: 0 8px; }
+  footer .sib { display: block; margin-top: 10px; letter-spacing: 0.1em; }
+  @media (max-width: 380px) {
+    .hero h1 { font-size: 52px; }
+    body { font-size: 16px; }
+    .lang-table { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="sibling" href="../hanzhang/"><span class="zh">← 中文名 · 李含章</span><span class="en">← Chinese name · 李含章</span></a>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" data-set="zh" aria-pressed="true">中文</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="tag"><span class="zh">英 文 名 · 取 名 说 明</span><span class="en">ON THE NAME</span></span>
+  <h1>Serena</h1>
+  <div class="ipa">/səˈriːnə/</div>
+  <div class="motto"><span class="zh">晴空无云 · 心境澄明</span><span class="en">Clear skies, a quiet mind.</span></div>
+  <br>
+  <span class="monogram">S</span>
+</header>
+
+<div class="wrap">
+
+<!-- ========== 壹 ========== -->
+<section>
+  <div class="sec-head">
+    <span class="num"><span class="zh">壹</span><span class="en">I</span></span>
+    <h2><span class="zh">名字释义</span><span class="en">Meaning</span></h2>
+  </div>
+
+  <div class="grand-quote">
+    <div class="q">serēnus, serēna</div>
+    <div class="gloss"><span class="zh">晴朗的，无云的；平静的，安详的</span><span class="en">clear, cloudless; calm, tranquil</span></div>
+    <div class="src"><span class="zh">—— 拉丁语形容词</span><span class="en">— Latin adjective</span></div>
+  </div>
+
+  <p class="zh" style="margin-top:22px">Serena 来自拉丁语形容词 <i class="la">serēnus</i>，<i class="la">serēna</i> 是它的阴性形式。这个词最早用来形容<strong>天空：晴朗、无云</strong>，后来引申到人：<strong>神情平静，内心安详从容</strong><sup class="ref"><a href="#r1">[1]</a></sup>。</p>
+  <p class="en" style="margin-top:22px">Serena comes from the Latin adjective <i>serēnus</i>; <i>serēna</i> is its feminine form. The word first described the <strong>sky — clear and cloudless</strong> — and was later used of people: <strong>a calm face, a settled and tranquil mind</strong><sup class="ref"><a href="#r1">[1]</a></sup>.</p>
+
+  <p class="zh">这个词再往上的来源，学界还没有定论。一种说法认为它和「干燥」有关，可以对照希腊语 <i class="la">ξηρός</i>（干）：不下雨的天，就是晴天<sup class="ref"><a href="#r1">[1]</a></sup>。</p>
+  <p class="en">Its deeper origin is uncertain. One proposal links it to a root meaning "dry" (compare Greek <i>ξηρός</i>) — a sky without rain is a clear sky<sup class="ref"><a href="#r1">[1]</a></sup>.</p>
+
+  <h3><span class="zh">两层含义</span><span class="en">Two layers of meaning</span></h3>
+  <div class="char-grid">
+    <div class="char-card">
+      <div class="big">caelum serēnum</div>
+      <div class="def"><span class="zh"><b>本义 · 天</b><br>晴朗无云的天空</span><span class="en"><b>Literal · the sky</b><br>a clear, cloudless sky</span></div>
+    </div>
+    <div class="char-card">
+      <div class="big">vultus serēnus</div>
+      <div class="def"><span class="zh"><b>引申 · 人</b><br>平静从容的面容</span><span class="en"><b>Figurative · a person</b><br>a calm, composed face</span></div>
+    </div>
+  </div>
+  <div class="merge-line"><span class="zh">从天空的<em>晴朗</em>，到人心的<em>澄明</em>。</span><span class="en">From a <em>clear</em> sky to a <em>clear</em> mind.</span></div>
+
+  <p class="zh">英语里的 <i class="la">serene</i>（宁静的）、<i class="la">serenity</i>（宁静），以及 <i class="la">serenade</i>（小夜曲，经法语、意大利语来自拉丁语 <i class="la">serenare</i>，本义「使晴朗、使平静」<sup class="ref"><a href="#r2">[2]</a></sup>），都和这个名字同源。</p>
+  <p class="en">English <i>serene</i>, <i>serenity</i> and even <i>serenade</i> (via French and Italian, from Latin <i>serenare</i>, "to make clear, to calm"<sup class="ref"><a href="#r2">[2]</a></sup>) all share this root.</p>
+
+  <h3><span class="zh">我赋予的现代解释</span><span class="en">What we hope it means for her</span></h3>
+  <div class="modern-note">
+    <p class="zh">遇事不慌，心中有定力。看得清，想得明白，在任何环境里都能从容自处。</p>
+    <p class="zh">平静不是没有锋芒，而是不被一时的风雨左右。云散了，天自然是晴的。</p>
+    <p class="en">Steady when things get hard, with a calm that comes from within. Seeing clearly, thinking clearly, and at ease wherever she is.</p>
+    <p class="en">Calm is not the absence of strength; it is not being pushed around by passing storms. When the clouds clear, the sky is simply blue.</p>
+  </div>
+</section>
+
+<!-- ========== 贰 ========== -->
+<section>
+  <div class="sec-head">
+    <span class="num"><span class="zh">贰</span><span class="en">II</span></span>
+    <h2><span class="zh">两千年语义稳定、正向</span><span class="en">Two thousand years of a good word</span></h2>
+  </div>
+
+  <p class="zh">从古罗马到今天，<i class="la">serenus</i> 及其后代词一直是褒义，从未变过。按年代举例：</p>
+  <p class="en">From ancient Rome to today, <i>serenus</i> and its descendants have only ever been words of praise. In chronological order:</p>
+
+  <div class="timeline">
+    <div class="t-item">
+      <span class="t-era"><span class="zh">古罗马 · 前29年</span><span class="en">Rome · 29 BC</span></span><span class="t-src"><span class="zh">维吉尔《农事诗》I.260</span><span class="en">Virgil, <i>Georgics</i> I.260</span><sup class="ref"><a href="#r3">[3]</a></sup></span>
+      <div class="t-quote">multa, forent quae mox caelo properanda <mark>sereno</mark></div>
+      <div class="t-gloss"><span class="zh">许多事，本来要等天晴时赶着去做</span><span class="en">many tasks that would soon have to be rushed under a clear sky</span></div>
+    </div>
+    <div class="t-item">
+      <span class="t-era"><span class="zh">古罗马 · 前29年</span><span class="en">Rome · 29 BC</span></span><span class="t-src"><span class="zh">维吉尔《农事诗》I.393</span><span class="en">Virgil, <i>Georgics</i> I.393</span><sup class="ref"><a href="#r3">[3]</a></sup></span>
+      <div class="t-quote">nec minus ex imbri soles et aperta <mark>serena</mark> / prospicere …</div>
+      <div class="t-gloss"><span class="zh">雨中也能预见到阳光和开阔的晴空</span><span class="en">from the rain, too, you can foresee sunshine and open clear skies</span></div>
+    </div>
+    <div class="t-item">
+      <span class="t-era"><span class="zh">古罗马 · 前19年</span><span class="en">Rome · 19 BC</span></span><span class="t-src"><span class="zh">维吉尔《埃涅阿斯纪》II.285–286</span><span class="en">Virgil, <i>Aeneid</i> II.285–286</span><sup class="ref"><a href="#r1">[1]</a></sup></span>
+      <div class="t-quote">quae causa indigna <mark>serenos</mark> / foedavit vultus?</div>
+      <div class="t-gloss"><span class="zh">是什么不堪的缘故，玷污了你平静的面容？</span><span class="en">what shameful cause has marred your serene face?</span></div>
+    </div>
+    <div class="t-item">
+      <span class="t-era">697–1797</span><span class="t-src"><span class="zh">威尼斯共和国</span><span class="en">Republic of Venice</span><sup class="ref"><a href="#r4">[4]</a></sup></span>
+      <div class="t-quote"><mark>Serenissima</mark> Repubblica di Venezia</div>
+      <div class="t-gloss"><span class="zh">「最宁静的威尼斯共和国」，存续一千一百年，至今人们仍称威尼斯为 <i class="la">La Serenissima</i>；威尼斯总督的尊称也是 <i class="la">Serenissimus</i>（最宁静者）<sup class="ref"><a href="#r5">[5]</a></sup>。</span><span class="en">"The Most Serene Republic of Venice" lasted eleven centuries; Venice is still called <i>La Serenissima</i>, and its Doge was styled <i>Serenissimus</i>, "Most Serene"<sup class="ref"><a href="#r5">[5]</a></sup>.</span></div>
+    </div>
+    <div class="t-item">
+      <span class="t-era">1596</span><span class="t-src"><span class="zh">斯宾塞《仙后》第六卷</span><span class="en">Edmund Spenser, <i>The Faerie Queene</i>, Book VI</span><sup class="ref"><a href="#r6">[6]</a></sup></span>
+      <div class="t-gloss"><span class="zh">英国文艺复兴的长篇史诗。第六卷是「礼仪之卷」，骑士卡利潘寻找的女士就叫 Serena。这是 Serena 作为人名在英语文学中的早期用例。</span><span class="en">In the "Book of Courtesy" of this English Renaissance epic, the knight Calepine's lady is named Serena — an early use of Serena as a personal name in English literature.</span></div>
+    </div>
+    <div class="t-item">
+      <span class="t-era"><span class="zh">今天</span><span class="en">Today</span></span><span class="t-src"><span class="zh">摩纳哥亲王</span><span class="en">The Prince of Monaco</span><sup class="ref"><a href="#r5">[5]</a></sup></span>
+      <div class="t-quote">His <mark>Serene</mark> Highness</div>
+      <div class="t-gloss"><span class="zh">在位的摩纳哥亲王阿尔贝二世，至今的正式尊称仍是 Serene Highness。</span><span class="en">Reigning Prince Albert II of Monaco is still addressed as "Serene Highness".</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 叁 ========== -->
+<section>
+  <div class="sec-head">
+    <span class="num"><span class="zh">叁</span><span class="en">III</span></span>
+    <h2><span class="zh">欧洲多语通用</span><span class="en">One word across Europe</span></h2>
+  </div>
+
+  <p class="zh">Serena 最难得的一点：在好几种欧洲语言里，<strong>serena 本身就是一个日常形容词</strong>，即「平静的、晴朗的」的阴性形式。<strong>拼写一字不差，意思和名字完全一致</strong><sup class="ref"><a href="#r7">[7]</a></sup>。</p>
+  <p class="en">What makes Serena rare: in several European languages <strong>serena is itself an everyday adjective</strong> — the feminine of "calm, clear". <strong>Same spelling, same meaning as the name</strong><sup class="ref"><a href="#r7">[7]</a></sup>.</p>
+
+  <h3><span class="zh">拼写相同，含义相同</span><span class="en">Same spelling, same meaning</span></h3>
+  <table class="lang-table">
+    <thead><tr><th><span class="zh">语言</span><span class="en">Language</span></th><th><span class="zh">写法</span><span class="en">Word</span></th><th><span class="zh">读音</span><span class="en">IPA</span></th><th><span class="zh">含义</span><span class="en">Meaning</span></th></tr></thead>
+    <tbody>
+      <tr class="same"><td><span class="zh">拉丁语</span><span class="en">Latin</span></td><td class="w">serēna</td><td class="ipa">—</td><td><span class="zh">晴朗的、平静的</span><span class="en">clear, calm</span></td></tr>
+      <tr class="same"><td><span class="zh">意大利语</span><span class="en">Italian</span></td><td class="w">serena</td><td class="ipa">/seˈre.na/</td><td><span class="zh">平静的；晴朗无云的</span><span class="en">calm; cloudless, fair</span></td></tr>
+      <tr class="same"><td><span class="zh">西班牙语</span><span class="en">Spanish</span></td><td class="w">serena</td><td class="ipa">/seˈɾena/</td><td><span class="zh">平静的、沉着的</span><span class="en">calm, self-possessed</span></td></tr>
+      <tr class="same"><td><span class="zh">葡萄牙语</span><span class="en">Portuguese</span></td><td class="w">serena</td><td class="ipa">/seˈɾẽ.nɐ/ <span class="zh">(巴西)</span><span class="en">(BR)</span></td><td><span class="zh">安详的；（天气）晴朗的</span><span class="en">peaceful; (weather) fair</span></td></tr>
+      <tr class="same"><td><span class="zh">加泰罗尼亚语</span><span class="en">Catalan</span></td><td class="w">serena</td><td class="ipa">—</td><td><span class="zh">平静的（<i class="la">serè</i> 的阴性）</span><span class="en">calm (fem. of <i>serè</i>)</span></td></tr>
+      <tr class="same"><td><span class="zh">世界语</span><span class="en">Esperanto</span></td><td class="w">serena</td><td class="ipa">—</td><td><span class="zh">平静的、安详的</span><span class="en">calm, serene</span></td></tr>
+    </tbody>
+  </table>
+
+  <h3><span class="zh">同源词，一看就懂</span><span class="en">Close cousins</span></h3>
+  <table class="lang-table">
+    <tbody>
+      <tr><td><span class="zh">英语</span><span class="en">English</span></td><td class="w">serene</td><td><span class="zh">宁静的</span><span class="en">calm, untroubled</span></td></tr>
+      <tr><td><span class="zh">法语</span><span class="en">French</span></td><td class="w">serein / sereine</td><td><span class="zh">（天空）无云的；平静的。法国人名中也用 <i class="la">Serena</i> 和 <i class="la">Séréna</i><sup class="ref"><a href="#r8">[8]</a></sup></span><span class="en">(sky) unclouded; calm. As a name, both <i>Serena</i> and <i>Séréna</i> are used<sup class="ref"><a href="#r8">[8]</a></sup></span></td></tr>
+      <tr><td><span class="zh">瑞典语</span><span class="en">Swedish</span></td><td class="w">seren</td><td><span class="zh">宁静的；它的定式和复数形式正好写作 <i class="la">serena</i></span><span class="en">serene; its definite/plural form is spelled <i>serena</i></span></td></tr>
+      <tr><td><span class="zh">罗马尼亚语</span><span class="en">Romanian</span></td><td class="w">senin</td><td><span class="zh">晴朗的（同一拉丁词的后代）</span><span class="en">clear (descended from the same Latin word)</span></td></tr>
+    </tbody>
+  </table>
+  <p class="table-note"><span class="zh">资料来源：维基词典 serena、serenus、sereno、serein 等词条<sup class="ref"><a href="#r7">[7]</a></sup>。</span><span class="en">Source: Wiktionary entries for serena, serenus, sereno, serein<sup class="ref"><a href="#r7">[7]</a></sup>.</span></p>
+
+  <h3><span class="zh">常见，但不泛滥</span><span class="en">Familiar, never overused</span></h3>
+  <p class="zh">Serena 在多个国家都是被认识、被使用的名字，排名都在中段，不会一个班里撞好几个<sup class="ref"><a href="#r8">[8]</a></sup>：</p>
+  <p class="en">Serena is recognised and used in many countries, but sits comfortably mid-table — not a name shared by half the class<sup class="ref"><a href="#r8">[8]</a></sup>:</p>
+  <table class="lang-table">
+    <tbody>
+      <tr><td><span class="zh">意大利</span><span class="en">Italy</span></td><td><span class="zh">第 78 名（2024）</span><span class="en">#78 (2024)</span></td></tr>
+      <tr><td><span class="zh">法国</span><span class="en">France</span></td><td><span class="zh">第 296 名（2024）</span><span class="en">#296 (2024)</span></td></tr>
+      <tr><td><span class="zh">美国</span><span class="en">United States</span></td><td><span class="zh">第 325 名（2025）</span><span class="en">#325 (2025)</span></td></tr>
+      <tr><td><span class="zh">英格兰和威尔士</span><span class="en">England &amp; Wales</span></td><td><span class="zh">第 381 名（2025）</span><span class="en">#381 (2025)</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ========== 肆 ========== -->
+<section>
+  <div class="sec-head">
+    <span class="num"><span class="zh">肆</span><span class="en">IV</span></span>
+    <h2><span class="zh">以 Serena 为名的人</span><span class="en">Women named Serena</span></h2>
+  </div>
+
+  <h3><span class="zh">古代：帝国的公主</span><span class="en">Antiquity: an imperial princess</span></h3>
+  <div class="person">
+    <div class="name">Serena <span class="tag"><span class="zh">约 370 – 408</span><span class="en">c. 370 – 408</span></span></div>
+    <div class="desc"><span class="zh">罗马帝国晚期的贵族女性，生于西班牙。她是皇帝<strong>狄奥多西一世</strong>的侄女，父亲去世后由狄奥多西收养。约 384 年嫁给名将<strong>斯提里科</strong>，两个女儿先后嫁给皇帝霍诺留，是当时帝国权力中心最有影响力的女性之一<sup class="ref"><a href="#r9">[9]</a></sup>。</span><span class="en">A noblewoman of the late Roman Empire, born in Hispania. Niece and adopted daughter of Emperor <strong>Theodosius I</strong>, she married the general <strong>Stilicho</strong> around 384; both her daughters became wives of Emperor Honorius. She was one of the most influential women at the centre of imperial power<sup class="ref"><a href="#r9">[9]</a></sup>.</span></div>
+  </div>
+
+  <h3><span class="zh">现代：从球场到太空</span><span class="en">Modern: from the court to orbit</span></h3>
+  <div class="person">
+    <div class="name">Serena Williams <span class="tag"><span class="zh">网球 · 1981–</span><span class="en">Tennis · b. 1981</span></span></div>
+    <div class="desc"><span class="zh">中文常译「塞雷娜·威廉姆斯」，人称「小威」。她拿下 <strong>23 座大满贯女单冠军</strong>，是公开赛年代的最高纪录；还有 <strong>4 枚奥运金牌</strong>，世界第一累计 <strong>319 周</strong><sup class="ref"><a href="#r10">[10]</a></sup>。她在顶尖竞技中的冷静和强大，是对这个名字最好的诠释。</span><span class="en"><strong>23 Grand Slam singles titles</strong> — the most of the Open Era — plus <strong>four Olympic gold medals</strong> and <strong>319 weeks</strong> at world No. 1<sup class="ref"><a href="#r10">[10]</a></sup>. Composure and power at the very top of sport.</span></div>
+  </div>
+  <div class="person">
+    <div class="name">Serena Auñón-Chancellor <span class="tag"><span class="zh">宇航员 · 1976–</span><span class="en">Astronaut · b. 1976</span></span></div>
+    <div class="desc"><span class="zh">美国医生、工程师、NASA 宇航员。2018 年 6 月至 12 月搭乘联盟 MS-09 飞船，在国际空间站执行第 56、57 期任务，在太空工作了将近 <strong>197 天</strong><sup class="ref"><a href="#r11">[11]</a></sup>。名字本义是「晴朗的天空」，她真的飞到了天空之上。</span><span class="en">American physician, engineer and NASA astronaut. From June to December 2018 she flew Soyuz MS-09 to the International Space Station for Expeditions 56/57, spending nearly <strong>197 days</strong> in space<sup class="ref"><a href="#r11">[11]</a></sup>. A name that means "clear sky" — and she went beyond it.</span></div>
+  </div>
+</section>
+
+<!-- ========== 伍 ========== -->
+<section>
+  <div class="sec-head">
+    <span class="num"><span class="zh">伍</span><span class="en">V</span></span>
+    <h2><span class="zh">读音</span><span class="en">Pronunciation</span></h2>
+  </div>
+
+  <div class="syl-grid">
+    <div class="syl"><div class="s">Se</div><div class="i">sə</div><div class="lab"><span class="zh">轻读</span><span class="en">unstressed</span></div></div>
+    <div class="syl stress"><div class="s">re</div><div class="i">ˈriː</div><div class="lab"><span class="zh">重音</span><span class="en">stressed</span></div></div>
+    <div class="syl"><div class="s">na</div><div class="i">nə</div><div class="lab"><span class="zh">轻收</span><span class="en">soft ending</span></div></div>
+  </div>
+
+  <p class="zh">英语读作 <strong>/səˈriːnə/</strong>，三个音节，重音在中间。拼写和读音一一对应，第一次见到的人基本不会读错、写错。</p>
+  <p class="en">In English: <strong>/səˈriːnə/</strong>, three syllables, stress on the middle one. It is spelled exactly as it sounds, so people rarely misread or misspell it.</p>
+
+  <p class="zh">更巧的是，意大利语 /seˈre.na/、西班牙语 /seˈɾena/、葡萄牙语里，<strong>重音同样落在第二个音节</strong>，只是元音略有不同。走到哪里，这个名字的节奏都一样。</p>
+  <p class="en">In Italian /seˈre.na/, Spanish /seˈɾena/ and Portuguese the <strong>stress also falls on the second syllable</strong>; only the vowels shift slightly. Wherever she goes, the name keeps its rhythm.</p>
+
+  <h3><span class="zh">和姓连读</span><span class="en">With the family name</span></h3>
+  <p class="zh"><strong>Serena Li</strong>：名字以开口元音 -a 收尾，接上 Li 的辅音 l，过渡自然，不粘连。三个音节加一个音节，长短得当。</p>
+  <p class="en"><strong>Serena Li</strong>: the open -a ending flows cleanly into the l of Li; three syllables then one — a balanced rhythm.</p>
+
+  <h3><span class="zh">在亚洲</span><span class="en">In Asia</span></h3>
+  <p class="zh">中文音译为「塞雷娜」，日语里写作 セリーナ / セレナ。约从 1980 年代起，Serena 在日本也成了女孩名，用汉字写作「星礼奈」「世伶奈」等<sup class="ref"><a href="#r8">[8]</a></sup>。</p>
+  <p class="en">Rendered 塞雷娜 in Chinese and セリーナ / セレナ in Japanese. Since around the 1980s Serena has also been a Japanese girls' name, written with kanji such as 星礼奈 or 世伶奈<sup class="ref"><a href="#r8">[8]</a></sup>.</p>
+</section>
+
+<!-- ========== 陆 ========== -->
+<section>
+  <div class="sec-head">
+    <span class="num"><span class="zh">陆</span><span class="en">VI</span></span>
+    <h2><span class="zh">面向世界的名字</span><span class="en">A name for the world</span></h2>
+  </div>
+
+  <p class="zh">我们为她选一个英文名，希望的不只是好听，而是<strong>走到世界任何地方，都不需要被翻译、被解释</strong>：</p>
+  <p class="en">We wanted more than a pretty English name. We wanted one that <strong>needs no translation and no explanation, wherever in the world she goes</strong>:</p>
+
+  <div class="modern-note">
+    <p class="zh">◆ <strong>在欧洲</strong>，在罗马、马德里、里斯本、巴塞罗那，serena 就是「平静的」；在伦敦、纽约，人们听到它会想起 serene；在巴黎，它是 sereine 的姐妹词。</p>
+    <p class="zh">◆ <strong>在世界语里</strong>，这门专为跨国交流设计的语言中，serena 的意思也正是「平静的」。</p>
+    <p class="zh">◆ <strong>在美洲</strong>，智利有一座城市就叫拉塞雷纳（La Serena），1540 年代建城，得名于西班牙的同名地区<sup class="ref"><a href="#r12">[12]</a></sup>。</p>
+    <p class="zh">◆ <strong>在亚洲</strong>，日本有以 Serena 为名的女孩，菲律宾他加禄语也借用了这个名字<sup class="ref"><a href="#r7">[7]</a></sup>。</p>
+    <p class="en">◆ <strong>In Europe</strong> — in Rome, Madrid, Lisbon and Barcelona, serena simply means "calm"; in London and New York it echoes serene; in Paris it is a sister of sereine.</p>
+    <p class="en">◆ <strong>In Esperanto</strong>, the language built for people of every nation, serena means exactly "calm".</p>
+    <p class="en">◆ <strong>In the Americas</strong>, the Chilean city of La Serena, founded in the 1540s, is named after a region of Spain<sup class="ref"><a href="#r12">[12]</a></sup>.</p>
+    <p class="en">◆ <strong>In Asia</strong>, Serena is a girls' name in Japan and has been borrowed into Tagalog in the Philippines<sup class="ref"><a href="#r7">[7]</a></sup>.</p>
+  </div>
+
+  <p class="zh">一个名字，从罗马人的晴空出发，穿过两千年、跨过几大洲，意思始终不变。我们希望她也一样：无论身处哪种文化、哪种语言，都能<strong>从容自在，心境澄明</strong>。</p>
+  <p class="en">A word that began as a Roman sky has crossed two thousand years and several continents without changing its meaning. We hope the same for her: in any culture, in any language, to be <strong>at ease and clear of mind</strong>.</p>
+</section>
+
+<!-- ========== 柒 ========== -->
+<section>
+  <div class="sec-head">
+    <span class="num"><span class="zh">柒</span><span class="en">VII</span></span>
+    <h2><span class="zh">与「含章」相合</span><span class="en">Serena &amp; Hanzhang</span></h2>
+  </div>
+
+  <p class="zh">她的中文名「<a href="../hanzhang/">含章</a>」出自《周易》：才华蕴藏于内，待时而发。英文名 Serena 出自拉丁语：心境澄明，从容自若。</p>
+  <p class="zh">一个来自东方最古老的经典，一个来自西方最古老的语言之一；一个讲<strong>内在的积累</strong>，一个讲<strong>外在的从容</strong>。正因为心里有积累，才能遇事不慌；正因为不慌，才能等到对的时机。</p>
+  <p class="en">Her Chinese name, <a href="../hanzhang/">含章 Hanzhang</a>, comes from the <i>Book of Changes</i>: brilliance held within, revealed in its own time. Serena comes from Latin: a clear, unhurried calm.</p>
+  <p class="en">One from the oldest classic of the East, one from a foundational language of the West. One speaks of <strong>what is gathered within</strong>, the other of <strong>the calm it shows without</strong>. Because there is depth inside, she need not hurry; because she does not hurry, she can wait for the right moment.</p>
+
+  <div class="final-couplet">
+    <span class="zh">含章于内，澄明于外<br><span class="nm">李含章 · Serena Li</span></span>
+    <span class="en">Brilliance within, serenity without.<br><span class="nm">李含章 · Serena Li</span></span>
+  </div>
+</section>
+
+<!-- ========== 附 ========== -->
+<section>
+  <div class="sec-head">
+    <span class="num"><span class="zh">附</span><span class="en">NOTES</span></span>
+    <h2><span class="zh">参考文献</span><span class="en">References</span></h2>
+  </div>
+  <ol class="refs">
+    <li id="r1">Wiktionary, <i>serenus</i> (Latin)：<span class="zh">释义、词源（de Vaan 2008）、《埃涅阿斯纪》II.285–286 引文，</span><a href="https://en.wiktionary.org/wiki/serenus">en.wiktionary.org/wiki/serenus</a></li>
+    <li id="r2">Wiktionary, <i>serenade</i>，<a href="https://en.wiktionary.org/wiki/serenade">en.wiktionary.org/wiki/serenade</a></li>
+    <li id="r3">Vergilius, <i>Georgica</i> I, The Latin Library，<a href="https://www.thelatinlibrary.com/vergil/geo1.shtml">thelatinlibrary.com/vergil/geo1.shtml</a></li>
+    <li id="r4">Wikipedia, <i>Republic of Venice</i>，<a href="https://en.wikipedia.org/wiki/Republic_of_Venice">en.wikipedia.org/wiki/Republic_of_Venice</a></li>
+    <li id="r5">Wikipedia, <i>Serene Highness</i>，<a href="https://en.wikipedia.org/wiki/Serene_Highness">en.wikipedia.org/wiki/Serene_Highness</a></li>
+    <li id="r6">Wikipedia, <i>The Faerie Queene</i>，<a href="https://en.wikipedia.org/wiki/The_Faerie_Queene">en.wikipedia.org/wiki/The_Faerie_Queene</a></li>
+    <li id="r7">Wiktionary, <i>serena</i> / <i>Serena</i> / <i>sereno</i> / <i>serein</i>，<a href="https://en.wiktionary.org/wiki/serena">en.wiktionary.org/wiki/serena</a></li>
+    <li id="r8">Behind the Name, <i>Serena</i>；Wikipedia, <i>Serena (given name)</i>，<a href="https://www.behindthename.com/name/serena">behindthename.com/name/serena</a>，<a href="https://en.wikipedia.org/wiki/Serena_(given_name)">en.wikipedia.org/wiki/Serena_(given_name)</a></li>
+    <li id="r9">Wikipedia, <i>Serena (wife of Stilicho)</i>，<a href="https://en.wikipedia.org/wiki/Serena_(wife_of_Stilicho)">en.wikipedia.org/wiki/Serena_(wife_of_Stilicho)</a></li>
+    <li id="r10">Wikipedia, <i>Serena Williams</i>，<a href="https://en.wikipedia.org/wiki/Serena_Williams">en.wikipedia.org/wiki/Serena_Williams</a></li>
+    <li id="r11">Wikipedia, <i>Serena Auñón-Chancellor</i>，<a href="https://en.wikipedia.org/wiki/Serena_Au%C3%B1%C3%B3n-Chancellor">en.wikipedia.org/wiki/Serena_Auñón-Chancellor</a></li>
+    <li id="r12">Wikipedia, <i>La Serena, Chile</i>，<a href="https://en.wikipedia.org/wiki/La_Serena,_Chile">en.wikipedia.org/wiki/La_Serena,_Chile</a></li>
+  </ol>
+</section>
+
+<footer>
+  <span class="zh">晴空无云<span class="dot">·</span>心境澄明</span><span class="en">Clear skies<span class="dot">·</span>a quiet mind</span>
+  <a class="sib" href="../hanzhang/"><span class="zh">中文名 · 李含章 →</span><span class="en">Chinese name · 李含章 →</span></a>
+</footer>
+
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var buttons = document.querySelectorAll('.lang-switch button');
+    function apply(lang) {
+      root.setAttribute('data-lang', lang);
+      root.setAttribute('lang', lang === 'en' ? 'en' : 'zh-CN');
+      document.title = lang === 'en' ? 'Serena · On the Name' : 'Serena · 取名说明';
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.set === lang)); });
+    }
+    var initial = 'zh';
+    var q = new URLSearchParams(location.search).get('lang');
+    if (q === 'en' || q === 'zh') initial = q;
+    else { try { var saved = localStorage.getItem('serena-lang'); if (saved === 'en' || saved === 'zh') initial = saved; } catch (e) {} }
+    apply(initial);
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        apply(b.dataset.set);
+        try { localStorage.setItem('serena-lang', b.dataset.set); } catch (e) {}
+      });
+    });
+  })();
+</script>
+</body>
+</html>
